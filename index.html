@@ -1,79 +1,64 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tunda Bayar — PT. MMN PT. MAN</title>
-  <link rel="icon" href="https://lh3.googleusercontent.com/d/1BvaivHWfQlWEH1cFfITYN5xeAOg-HZUh" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .box {
-      text-align: center;
-      padding: 40px 30px;
-    }
-    .logo {
-      max-width: 140px;
-      max-height: 80px;
-      object-fit: contain;
-      margin-bottom: 20px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    h1 { font-size: 22px; color: #00d4ff; margin-bottom: 6px; }
-    p  { font-size: 13px; opacity: .7; margin-bottom: 24px; }
-    .spinner {
-      width: 36px; height: 36px;
-      border: 3px solid rgba(255,255,255,.2);
-      border-top-color: #00d4ff;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 16px;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .info { font-size: 12px; opacity: .5; margin-bottom: 20px; }
-    .btn {
-      display: inline-block;
-      padding: 10px 24px;
-      background: #00d4ff;
-      color: #000;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 13px;
-    }
-  </style>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 24.8.1.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		pre { background: transparent }
+		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		pre.cjk { font-family: "NSimSun", monospace; font-size: 10pt }
+		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+	</style>
 </head>
-<body>
-  <div class="box">
-    <img
-      src="https://drive.google.com/thumbnail?id=1EQ6iLI9D8sUU4cpxMMAD78mQ69M_2bIV&sz=w200"
-      alt="Logo"
-      class="logo"
-      onerror="this.style.display='none'">
-    <h1>TUNDA BAYAR</h1>
-    <p>PT. MMN - PT. MAN</p>
-    <div class="spinner"></div>
-    <div class="info">Mengalihkan ke aplikasi...</div>
-    <a class="btn" id="btnLink" href="#">Buka Manual →</a>
-  </div>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre class="western">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;id&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+  &lt;title&gt;TUNDA - BAYAR&lt;/title&gt;
+  &lt;link rel=&quot;icon&quot; href=&quot;https://drive.google.com/file/d/1BvaivHWfQlWEH1cFfITYN5xeAOg-HZUh/view?usp=drive_link&quot; /&gt;
+  &lt;style&gt;
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+      overflow: hidden; /* Mencegah scroll ganda */
+    }
 
-  <script>
-    var APP_URL = "https://script.google.com/macros/s/AKfycbx7t7Yez3kpW3zUJmtlcVXTudpOm63vr2FoGHB9gj_FE2-9HI67rlzU3vhaPU9hqCOLoA/exec";
-    document.getElementById('btnLink').href = APP_URL;
-    // Redirect otomatis setelah 1.5 detik
-    setTimeout(function() {
-      window.location.href = APP_URL;
-    }, 1500);
-  </script>
+    .iframe-container {
+      width: 100%;
+      height: 100dvh; /* Menggunakan dvh agar pas di mobile browser */
+      overflow: hidden;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;iframe-container&quot;&gt;
+    &lt;iframe
+      id=&quot;app&quot;
+      src=&quot;https://script.google.com/macros/s/AKfycbx7t7Yez3kpW3zUJmtlcVXTudpOm63vr2FoGHB9gj_FE2-9HI67rlzU3vhaPU9hqCOLoA/exec&quot;
+      scrolling=&quot;yes&quot;
+      allowfullscreen=&quot;true&quot;
+      webkitallowfullscreen=&quot;true&quot;
+      mozallowfullscreen=&quot;true&quot;
+      allow=&quot;fullscreen; camera; microphone; display-capture; geolocation;&quot;&gt;
+    &lt;/iframe&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
 </body>
 </html>
