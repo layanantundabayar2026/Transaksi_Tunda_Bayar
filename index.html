@@ -3,31 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TUNDA - BAYAR</title>
-  
+  <title>Tunda Bayar — PT. MMN PT. MAN</title>
+
   <link rel="icon" href="https://lh3.googleusercontent.com/d/1BvaivHWfQlWEH1cFfITYN5xeAOg-HZUh" />
-  
+
   <style>
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
-      background-color: #eee;
-      overflow: hidden; /* Mencegah scroll ganda di browser */
-    }
-
-    .iframe-container {
-      width: 100%;
-      height: 100dvh; /* Sangat baik untuk mobile browser */
+      /* Samakan dengan warna background app agar tidak "flash" saat loading */
+      background-color: #0f3460;
       overflow: hidden;
     }
-
+    .iframe-container {
+      width: 100%;
+      height: 100dvh;
+      overflow: hidden;
+    }
     iframe {
       display: block;
       width: 100%;
       height: 100%;
       border: none;
+    }
+    /* Fallback tampil jika iframe tidak bisa dimuat */
+    .fallback {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100dvh;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      gap: 12px;
+    }
+    .fallback p { margin: 0; font-size: 14px; opacity: 0.8; }
+    .fallback a {
+      color: #00d4ff;
+      font-size: 14px;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 1px solid #00d4ff;
+      border-radius: 6px;
     }
   </style>
 </head>
@@ -37,12 +57,20 @@
     <iframe
       id="app"
       src="https://script.google.com/macros/s/AKfycbx7t7Yez3kpW3zUJmtlcVXTudpOm63vr2FoGHB9gj_FE2-9HI67rlzU3vhaPU9hqCOLoA/exec"
-      scrolling="yes"
       allowfullscreen="true"
       loading="lazy"
-      sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin allow-popups allow-modals allow-downloads"
-      allow="fullscreen; camera; microphone; display-capture; geolocation;">
+      sandbox="allow-top-navigation-by-user-activation allow-scripts allow-forms allow-same-origin allow-popups allow-modals allow-downloads"
+      allow="fullscreen; camera; microphone; display-capture; geolocation"
+      onerror="document.getElementById('app').style.display='none'; document.getElementById('fb').style.display='flex'">
     </iframe>
+  </div>
+
+  <!-- Fallback jika iframe gagal -->
+  <div class="fallback" id="fb">
+    <p>⚠️ Aplikasi tidak dapat dimuat.</p>
+    <p>Coba buka langsung:</p>
+    <a href="https://script.google.com/macros/s/AKfycbx7t7Yez3kpW3zUJmtlcVXTudpOm63vr2FoGHB9gj_FE2-9HI67rlzU3vhaPU9hqCOLoA/exec"
+       target="_blank">Buka Aplikasi</a>
   </div>
 
 </body>
